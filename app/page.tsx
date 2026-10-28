@@ -32,7 +32,7 @@ export default function HomePage() {
               <span className="line-mask"><span>Your Trusted Partner in</span></span>
               <span className="line-mask" style={{ "--reveal-delay": "120ms" } as React.CSSProperties}>
                 <span>
-                  Tax <em className="font-display italic text-lime-deep">Solutions</em>
+                  Tax <span className="text-lime-deep">Solutions</span>
                 </span>
               </span>
             </Reveal>
