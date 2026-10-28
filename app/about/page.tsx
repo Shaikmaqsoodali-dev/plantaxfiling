@@ -88,7 +88,7 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-[1240px] grid-cols-2 gap-10 px-5 lg:grid-cols-4 lg:px-8">
           {stats.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 90} className="text-center lg:text-left">
-              <p className="text-5xl font-medium tracking-tight text-lime sm:text-6xl">
+              <p className="text-5xl font-medium tracking-tight text-white sm:text-6xl">
                 <Counter to={stat.value} suffix={stat.suffix} />
               </p>
               <p className="mt-3 text-sm uppercase tracking-[.14em] text-white/50">{stat.label}</p>
