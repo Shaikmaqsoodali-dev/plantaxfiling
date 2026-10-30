@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Check, ShieldCheck, Clock, Users, TrendingUp } from "lucide-react"
 import PageHero from "@/components/page-hero"
 import Reveal from "@/components/reveal"
@@ -27,7 +28,13 @@ export default function AboutPage() {
         <div className="mx-auto grid max-w-[1240px] items-center gap-14 px-5 lg:grid-cols-2 lg:gap-20 lg:px-8">
           <Reveal variant="left">
             <div className="zoom-card relative h-[360px] w-full overflow-hidden lg:h-[440px]">
-              <img src="/img/about-1.jpg" alt="Advisory team collaborating" className="h-full w-full object-cover" />
+              <Image
+                src="/img/about-1.jpg"
+                alt="Advisory team collaborating"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </Reveal>
 

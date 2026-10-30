@@ -130,14 +130,14 @@ export default function ContactPage() {
                   <span className="flex size-12 shrink-0 items-center justify-center bg-ink text-lime transition-colors duration-500 group-hover:bg-lime group-hover:text-ink">
                     <item.icon size={20} />
                   </span>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-xs font-medium uppercase tracking-[.16em] text-ink/45">{item.label}</p>
                     {item.href ? (
-                      <a href={item.href} className="mt-1.5 block text-[15px] font-medium leading-6 text-ink transition-colors hover:text-lime-deep">
+                      <a href={item.href} className="mt-1.5 block text-[15px] font-medium leading-6 text-ink transition-colors hover:text-lime-deep break-words">
                         {item.value}
                       </a>
                     ) : (
-                      <p className="mt-1.5 text-[15px] font-medium leading-6 text-ink">{item.value}</p>
+                      <p className="mt-1.5 text-[15px] font-medium leading-6 text-ink break-words">{item.value}</p>
                     )}
                   </div>
                 </div>

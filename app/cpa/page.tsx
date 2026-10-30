@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Check, BadgeCheck, LineChart, Building2, Scale } from "lucide-react"
 import PageHero from "@/components/page-hero"
 import Reveal from "@/components/reveal"
@@ -51,8 +52,14 @@ export default function CpaPage() {
           </div>
 
           <Reveal variant="right" className="relative">
-            <div className="zoom-card aspect-[4/5] w-full overflow-hidden bg-paper">
-              <img src="/img/results.jpg" alt="CPA reviewing financial figures" className="h-full w-full object-cover" />
+            <div className="zoom-card relative aspect-[4/5] w-full overflow-hidden bg-paper">
+              <Image
+                src="/img/results.jpg"
+                alt="CPA reviewing financial figures"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
             <div className="animate-float absolute -bottom-6 -left-4 bg-lime px-7 py-5 shadow-[0_18px_40px_-18px_rgba(0,0,0,.35)]">
               <p className="text-3xl font-medium tracking-tight text-ink">

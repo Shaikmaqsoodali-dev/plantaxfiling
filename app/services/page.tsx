@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Check } from "lucide-react"
 import PageHero from "@/components/page-hero"
 import Reveal from "@/components/reveal"
@@ -25,7 +26,13 @@ export default function ServicesPage() {
             >
               <Reveal variant={i % 2 === 0 ? "left" : "right"} className={i % 2 === 0 ? "lg:order-1" : "lg:order-2"}>
                 <div className="zoom-card relative aspect-[4/3] w-full overflow-hidden bg-paper">
-                  <img src={service.image} alt={service.title} className="h-full w-full object-cover" />
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                    className="object-cover"
+                  />
                   <span className="absolute left-0 top-0 bg-lime px-5 py-3 text-lg font-medium text-ink">
                     {service.number}
                   </span>

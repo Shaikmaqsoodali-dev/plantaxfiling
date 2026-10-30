@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { ChevronDown, Menu, X } from "lucide-react"
 import { useEffect, useState } from "react"
@@ -40,7 +41,7 @@ export default function SiteHeader() {
       >
         <div className="mx-auto flex h-[76px] max-w-[1240px] items-center justify-between gap-8 px-5 lg:px-8">
           <Link href="/" className="group flex shrink-0 items-center gap-2.5" aria-label="Plantaxfiling home">
-            <img src="/logo-icon.png" alt="" width={40} height={40} className="size-10 object-contain" />
+            <Image src="/logo-icon.png" alt="" width={40} height={40} className="size-10 object-contain" />
             <span className="text-[19px] font-bold tracking-[-.02em] text-ink">
               Plantax<span className="text-lime-deep">filing</span>
             </span>

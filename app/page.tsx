@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Check, Star } from "lucide-react"
 import Reveal from "@/components/reveal"
 import Counter from "@/components/counter"
@@ -65,7 +66,14 @@ export default function HomePage() {
 
           <div className="relative">
             <div className="zoom-card relative aspect-[4/5] max-h-[560px] w-full overflow-hidden bg-paper">
-              <img src="/img/hero-person.jpg" alt="Tax professional working on a laptop" className="h-full w-full object-cover" />
+              <Image
+                src="/img/hero-person.jpg"
+                alt="Tax professional working on a laptop"
+                fill
+                sizes="(min-width: 1024px) 46vw, 100vw"
+                className="object-cover"
+                preload
+              />
               <div className="absolute inset-0 bg-linear-to-t from-ink/25 to-transparent" />
             </div>
 
@@ -102,10 +110,22 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-[1240px] items-center gap-14 px-5 lg:grid-cols-2 lg:gap-20 lg:px-8">
           <Reveal variant="left" className="relative">
             <div className="zoom-card relative h-[340px] w-full overflow-hidden lg:h-[420px]">
-              <img src="/img/about-1.jpg" alt="Tax advisory team in a meeting" className="h-full w-full object-cover" />
+              <Image
+                src="/img/about-1.jpg"
+                alt="Tax advisory team in a meeting"
+                fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
+              />
             </div>
             <div className="zoom-card absolute -bottom-10 right-0 hidden h-[220px] w-[62%] overflow-hidden border-[10px] border-paper lg:block">
-              <img src="/img/about-2.jpg" alt="Advisors reviewing documents with a client" className="h-full w-full object-cover" />
+              <Image
+                src="/img/about-2.jpg"
+                alt="Advisors reviewing documents with a client"
+                fill
+                sizes="(min-width: 1024px) 31vw, 0px"
+                className="object-cover"
+              />
             </div>
             <div className="absolute -left-4 -top-4 hidden size-20 border-2 border-lime lg:block" />
           </Reveal>
@@ -246,8 +266,14 @@ export default function HomePage() {
             </div>
           </Reveal>
         </div>
-        <div className="zoom-card min-h-[380px] overflow-hidden">
-          <img src="/img/results.jpg" alt="Accountant calculating figures at a desk" className="h-full w-full object-cover" />
+        <div className="zoom-card relative min-h-[380px] overflow-hidden">
+          <Image
+            src="/img/results.jpg"
+            alt="Accountant calculating figures at a desk"
+            fill
+            sizes="(min-width: 1024px) 45vw, 100vw"
+            className="object-cover"
+          />
         </div>
       </section>
 
